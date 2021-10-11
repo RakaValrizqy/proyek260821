@@ -8,6 +8,10 @@ if($_POST){
 
     $telp=$_POST['telp'];
 
+    $username = $_POST['username'];
+
+    $password = $_POST['password'];
+
     if(empty($nama_pelanggan)){
 
         echo "<script>alert('nama pelanggan tidak boleh kosong');location.href='tambah_pelanggan.php';</script>";
@@ -21,11 +25,19 @@ if($_POST){
         
         echo "<script>alert('nomor telepon tidak boleh kosong');location.href='tambah_pelanggan.php';</script>";
 
+    } elseif(empty($username)){
+
+        echo "<script>alert('username tidak boleh kosong');location.href='tambah_pelanggan.php';</script>";
+
+    } elseif(empty($password)){
+        
+        echo "<script>alert('nomor telepon tidak boleh kosong');location.href='tambah_pelanggan.php';</script>";
+
     } else {
 
         include "koneksi.php";
 
-        $insert=mysqli_query($conn,"INSERT INTO `pelanggan` (`nama`, `alamat`, `telp`) VALUES ('$nama_pelanggan', '$alamat', '$telp');");
+        $insert=mysqli_query($conn,"INSERT INTO `pelanggan` (`nama`, `alamat`, `telp`, `username`, `password`) VALUES ('$nama_pelanggan', '$alamat', '$telp', '$username', md5('$password'));");
 
         if($insert){
 

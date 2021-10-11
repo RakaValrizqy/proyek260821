@@ -31,6 +31,13 @@
 
         <input type="number" name="telp" value="" class="form-control">
 
+        username :
+
+        <input type="text" name="username" value="" class="form-control">
+
+        password : 
+
+        <input type="text" name="password" value="" class="form-control">
         
         <input type="submit" name="simpan" value="Tambah Pelanggan" class="btn btn-primary">
 

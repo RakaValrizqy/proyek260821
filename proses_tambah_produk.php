@@ -27,7 +27,7 @@ if($_POST){
         
         echo "<script>alert('foto tidak boleh kosong');location.href='tambah_produk.php';</script>";
 
-    }else {
+    } else {
 
         include "koneksi.php";
 
@@ -45,6 +45,8 @@ if($_POST){
 
     }
 
+} else {
+    echo "Tidak ada data baru!";
 }
 
 ?>

@@ -11,9 +11,7 @@ if($_POST) {
     
     $subtotal = $qty * $harga;
 
-    echo "Harga /piece : Rp ".$harga."<br>";
-    echo "Quantity : ".$qty."<br>";
-    echo "Subtotal : Rp ".$subtotal;
+    
 
     if (empty($id_transaksi)) {
         echo "<script>alert('ID transaksi tidak boleh kosong';location.href='tambah_detail.php';)</script>";
